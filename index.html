@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Imagens Rotativas</title>
+<style>
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+</style>
+</head>
+<body>
+<img id="imagem" src="imagem1.jpg" alt="Imagem">
+
+<script>
+  const imagens = ["imagem1.jpg", "imagem2.jpg"];
+  let indice = 0;
+
+  setInterval(() => {
+    indice = (indice + 1) % imagens.length;
+    document.getElementById("imagem").src = imagens[indice];
+  }, 30000); // 10 segundos
+</script>
+</body>
+</html>
