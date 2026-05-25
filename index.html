@@ -2,32 +2,14 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Imagens Rotativas</title>
+<title>Imagem do Dia</title>
+<meta http-equiv="refresh" content="1800">
 <style>
-html, body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-}
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+html, body { margin:0; width:100%; height:100%; background:black; }
+img { width:100%; height:100%; object-fit:contain; }
 </style>
 </head>
 <body>
-<img id="imagem" src="imagem1.jpg" alt="Imagem">
-
-<script>
-  const imagens = ["imagem1.jpg", "imagem2.jpg"];
-  let indice = 0;
-
-  setInterval(() => {
-    indice = (indice + 1) % imagens.length;
-    document.getElementById("imagem").src = imagens[indice];
-  }, 30000); // 10 segundos
-</script>
+<img src="imagem-do-dia.jpg" alt="Imagem do Dia">
 </body>
 </html>
